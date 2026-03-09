@@ -1,8 +1,9 @@
 .footer {
-  background-color: #222;
-  color: #aaa;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(8, 11, 18, 0.88);
+  color: var(--text-muted);
   text-align: center;
-  padding: 24px;
+  padding: 1.8rem 1rem 2.2rem;
   font-size: 0.875rem;
-  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.01em;
 }

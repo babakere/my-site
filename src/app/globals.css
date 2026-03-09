@@ -4,16 +4,38 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-  color: #000;
-  background: #fff;
+  color: #f5f7ff;
+  background:
+    radial-gradient(circle at top, rgba(87, 127, 255, 0.18), transparent 26%),
+    radial-gradient(circle at 85% 12%, rgba(102, 180, 255, 0.08), transparent 18%),
+    linear-gradient(180deg, #0b0f19 0%, #080b12 100%);
+}
+
+body {
+  --accent: #8aa2ff;
+  --border: rgba(255, 255, 255, 0.12);
+  --text-strong: #f5f7ff;
+  --text-soft: #d8def2;
+  --text-muted: #9ea8c7;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
 }
 
 img {

@@ -3,77 +3,96 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: #d32f2f;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(8, 11, 18, 0.74);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 1000;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  min-height: 76px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 1.2rem;
+  color: var(--text-strong);
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .menuButton {
   display: none;
   background: none;
-  border: none;
-  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  width: 44px;
+  height: 44px;
+  color: var(--text-strong);
   cursor: pointer;
 }
 
 .links {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.links a {
-  color: white;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+.link {
+  color: var(--text-soft);
+  padding: 0.68rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
   font-size: 0.875rem;
-  text-transform: uppercase;
-  transition: background-color 0.2s;
+  transition:
+    transform 0.22s ease,
+    background-color 0.22s ease,
+    color 0.22s ease;
 }
 
-.links a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    transform: translateY(-1px);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-strong);
+  }
 }
 
 @media (max-width: 640px) {
   .menuButton {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .links {
     display: none;
     position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #d32f2f;
+    top: calc(100% + 0.5rem);
+    left: 0.75rem;
+    right: 0.75rem;
+    background: rgba(10, 14, 22, 0.98);
     flex-direction: column;
-    padding: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: stretch;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
   }
 
-  .links.open {
+  .open {
     display: flex;
+  }
+
+  .link {
+    padding: 0.9rem 1rem;
   }
 }

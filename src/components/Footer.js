@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <p>
-        &copy; {new Date().getFullYear()} Evan Barbers. All rights reserved.
+        &copy; {new Date().getFullYear()} Evan Babaker. All rights reserved.
       </p>
     </footer>
   );
